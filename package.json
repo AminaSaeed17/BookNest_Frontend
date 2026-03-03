@@ -2,7 +2,7 @@
   "name": "booknest",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://AminaSaeed17.github.io/BookNest_Frontend",
+  "homepage": "https://AminaSaeed17.github.io/Booknest_Frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",
