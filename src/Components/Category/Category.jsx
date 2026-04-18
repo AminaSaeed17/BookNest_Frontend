@@ -6,27 +6,27 @@ export default function GuestCategory() {
   const navigate = useNavigate();
  return <>
     <section>
-      <div className='py-40 bg-gradient-to-br from-[#F8F6F3] via-[#F5E6D34D] to-[#F8F6F3] p-8 flex'>
-        <div className='flex justify-between items-center w-full'>
+      <div className='py-30 bg-gradient-to-br from-[#F8F6F3] via-[#F5E6D34D] to-[#F8F6F3] p-8 flex'>
+        <div className='flex flex-col lg:flex-row justify-between items-center w-full gap-10'>
           <div>
             <div className='bg-[#FFFFFFCC] border-[0.8px] px-4 py-2 border-[#E8D4B880] rounded-[26843500px] shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A] flex justify-center items-center w-fit'>
               <div className='w-2 h-2 rounded-[26843500px] opacity-95 bg-[#B8956A] mr-1.5'></div>
               <div><p className='text-[#5D4E3E] relative top-[1.5px]'>Browse All Genres</p></div>
             </div>
             <div className='mt-6'>
-              <h1 className='lead-[60px] text-[#4A3D2F] text-6xl'>Explore <span className='text-[#B8956A]'>Categories</span></h1>
-              <p className='text-[#5D4E3E] text-xl leading-[32.5px] w-122.5 mt-4'>Discover your next great read from our carefully curated collection of genres and topics.</p>
+              <h1 className='text-3xl md:text-5xl lg:text-6xl text-[#4A3D2F]'>Explore <span className='text-[#B8956A]'>Categories</span></h1>
+              <p className='text-[#5D4E3E] text-xl leading-[32.5px] max-w-xl mt-4'>Discover your next great read from our carefully curated collection of genres and topics.</p>
             </div>
             <div className='flex gap-6 mt-6'>
-              <div className='flex items-center gap-3'>
-                <div className='w-12 h-12 rounded-2xl bg-[#FFFFFF] shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A] flex justify-center items-center'><i className="fa-solid fa-book-bookmark text-[#B8956A]"></i></div>
+              <div className='flex items-center flex-wrap gap-3'>
+                <div className='w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-[#FFFFFF] shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A] flex justify-center items-center'><i className="fa-solid fa-book-bookmark text-[#B8956A]"></i></div>
                 <div>
                   <p>12+</p>
                   <p>Categories</p>
                 </div>
               </div>
               <div className='flex items-center gap-3'>
-                <div className='w-12 h-12 rounded-2xl bg-[#FFFFFF] shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A] flex justify-center items-center'><i className="fa-solid fa-lines-leaning text-[#B8956A]"></i></div>
+                <div className='w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-[#FFFFFF] shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A] flex justify-center items-center'><i className="fa-solid fa-lines-leaning text-[#B8956A]"></i></div>
                 <div>
                   <p>1000+</p>
                   <p>Books</p>
@@ -34,7 +34,7 @@ export default function GuestCategory() {
               </div>
             </div>
           </div>
-          <div className='relative px-30'>
+          <div className='hidden lg:block relative px-30'>
             <div className='w-80 h-80 rounded-[26843500px] bg-gradient-to-br from-[#FFFFFF] to-[#F5E6D380] shadow-[0_8px_10px_-6px_rgba(0,0,0,0.1),0_20px_25px_-5px_rgba(0,0,0,0.1)]'></div>
             <div className='opacity-[54.33%] absolute top-[240px] left-[145px]'><i class="fa-regular fa-bookmark text-[#C4A57480]"></i></div>
             <div className='absolute left-[366.68px] top-8'><i class="fa-regular fa-bookmark text-[#C4A57480]"></i></div>
@@ -71,7 +71,7 @@ export default function GuestCategory() {
         <div></div>
       </div>
       <div className='bg-[#F8F6F3] p-8' onClick={()=> navigate('/home/CategoryType')}>
-        <div className="w-[280px] bg-[#ffffff] rounded-3xl overflow-hidden relative shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A]">
+        <div className="w-[280px] cursor-pointer transition-all duration-200 hover:-translate-y-1 bg-[#ffffff] rounded-3xl overflow-hidden relative shadow-[0_1px_2px_-1px_#0000001A,0_1px_3px_0_#0000001A]">
           <div className="relative h-[220px]">
             <img
               src={fictionImage}
@@ -95,3 +95,5 @@ export default function GuestCategory() {
     </section>
   </>
 }
+
+

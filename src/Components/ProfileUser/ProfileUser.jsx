@@ -1,24 +1,26 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import bookLibrary from '../../../src/assets/imgs/trending1.png'
+import { UserContext } from '../Context/UserContext'
 
 export default function ProfileUser() {
+  const {userData} = useContext(UserContext);
   return <>
     <div className='bg-[#F8F6F3]'>
-      <div className='bg-gradient-to-r from-[#F5E6D3] to-[#E8D4B8] px-8 py-12 relative'>
+      <div className='bg-linear-to-r from-[#F5E6D3] to-[#E8D4B8] px-8 py-12 relative'>
         <div className=''>
           <div className='flex justify-center items-center flex-col'>
             <div className='flex flex-col justify-center items-center relative w-fit'>
               <div className='w-32 h-32 bg-[#C4A574] rounded-[26843500px] p-1 border-4 border-[#FFFFFF] flex justify-center items-center'><i className="fa-regular fa-user text-[#FFFFFF]"></i></div>
               <div className='w-10 h-10 bg-[#C4A574] rounded-[26843500px] border-4 border-[#FFFFFF] flex justify-center items-center absolute top-24 left-24'><i class="fa-solid fa-book-open text-[#FFFFFF]"></i></div>
             </div>
-            <h1 className='mt-4 text-[#6B5744]'>Shawkat Yasser</h1>
+            <h1 className='mt-4 text-[#6B5744]'>{userData?.name}</h1>
             <div className='flex gap-4 mt-2 text-[#8B7355]'>
-              <div className=''><i class="fa-regular fa-envelope"></i> shawkatyasser22@gmail.com</div>
+              <div className=''><i class="fa-regular fa-envelope"></i> {userData?.email}</div>
               <div><i class="fa-regular fa-calendar"></i> Joined Nov 2024</div>
             </div>
           </div>
           <div className='w-[320px] h-80 rounded-[26843500px] bg-[#D4A5741A] blur-[128px] absolute left-0 top-6'></div>
-          <div className='w-87 h-87 rounded-[26843500px] bg-[#FFFFFF33] blur-[128px] absolute left-[888px]'></div>
+          <div className='w-87 h-87 rounded-[26843500px] bg-[#FFFFFF33] blur-[128px] absolute left-222'></div>
         </div>
     </div>
     <div className='px-8 flex flex-col gap-12'>

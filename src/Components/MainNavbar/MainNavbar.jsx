@@ -1,14 +1,26 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { UserContext } from '../Context/UserContext.jsx';
+import Logo from '../Logo/Logo.jsx';
 
 export default function MainNavbar() {
+  let navigate = useNavigate();
+  const { userData } = useContext(UserContext);
+  function logOut(){
+    localStorage.removeItem('userToken');
+    navigate('/');
+  }
+
   return <>
     <header className="bg-[#FFFFFF] header-font shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0px_rgba(0,0,0,0.1)] mb-1">
     <nav aria-label="Global" className="mx-auto flex  items-center justify-between px-3 lg:px-8">
       <div className="flex lg:flex-1">
-        <NavLink href="#" className="-m-1.5 p-1.5">
-          <span className="sr-only">Your Company</span>
-          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt className="h-8 w-auto" />
+        <NavLink href="#" className="flex items-center gap-2.5 shrink-0">
+          
+          <Logo/>
+           <span className="text-[#4A3D2F] text-xl tracking-tight">
+              BookNest
+            </span>
         </NavLink>
       </div>
       <div className="flex lg:hidden">
@@ -27,8 +39,8 @@ export default function MainNavbar() {
         <NavLink to={'kids'} className="text-sm/6  text-gray-900 bg-[#FFE8F0] px-5 py-2 rounded-2xl shadow-[0_1px_3px_0px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.1)] border-[0.8px] border-[#FFD4E5]"> <i class="fa-regular fa-face-smile"></i> Kids</NavLink>
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2 items-center">
-        <NavLink to={'profile'}><button className="text-sm/6 font-semibold text-gray-900 px-3 flex gap-3 items-center cursor-pointer"><div className='rounded-[26843500px] bg-[#C4A574] w-9 h-9 flex justify-center items-center'><i className="fa-regular fa-user text-[#FFFFFF]"></i></div> <p className='text-[#4A3D2F]'>Shawkat Yasser</p></button></NavLink>
-        <NavLink to={'/'}><button className="text-sm/6 font-semibold text-gray-900 cursor-pointer"><i className="fa-solid fa-arrow-right-from-bracket text-[#4A3D2F]"></i></button></NavLink>
+        <NavLink to={'profile'}><button className="text-sm/6 font-semibold text-gray-900 px-3 flex gap-3 items-center cursor-pointer"><div className='rounded-[26843500px] bg-[#C4A574] w-9 h-9 flex justify-center items-center'><i className="fa-regular fa-user text-[#FFFFFF]"></i></div> <p className='text-[#4A3D2F]'>{userData?.name}</p></button></NavLink>
+        <button onClick={()=> logOut()} className="text-sm/6 font-semibold text-gray-900 cursor-pointer"><i className="fa-solid fa-arrow-right-from-bracket text-[#4A3D2F]"></i></button>
       </div>
     </nav>
     <div>
