@@ -1,4 +1,4 @@
-import{r as e,j as t}from"./index-CiE_kG11.js";import{A as a}from"./aos-C8n9Y8I9.js";import{S as s}from"./ShareSection-B1Md2mIo.js";const o="/Booknest_Frontend/assets/close-book-with-blue-cover%201-D78F9KfF.png",r="/Booknest_Frontend/assets/close-book-with-blue-cover%202-6GK51Kdf.png",i="/Booknest_Frontend/assets/close-book-with-blue-cover%203-BiQtmY-c.png",l=`
+import{r as e,j as t}from"./index-Dd3I6kO6.js";import{A as a}from"./aos-BfzuefE6.js";import{S as s}from"./ShareSection-DGRddX6G.js";const o="/Booknest_Frontend/assets/close-book-with-blue-cover%201-D78F9KfF.png",r="/Booknest_Frontend/assets/close-book-with-blue-cover%202-6GK51Kdf.png",i="/Booknest_Frontend/assets/close-book-with-blue-cover%203-BiQtmY-c.png",l=`
   @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(22px); }
     to   { opacity: 1; transform: translateY(0); }
